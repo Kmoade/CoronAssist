@@ -1,0 +1,12 @@
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<Files ~ "\.(env|config|log)$">
+    Deny from all
+</Files>
+
+# API security
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"

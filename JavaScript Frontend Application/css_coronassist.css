@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #2563eb;
+    --danger-color: #dc2626;
+    --warning-color: #d97706;
+    --success-color: #059669;
+}
+
+.assessment-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.assessment-step {
+    transition: all 0.3s ease;
+}
+
+.symptom-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.symptom-checkbox {
+    display: none;
+}
+
+.symptom-label {
+    padding: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.symptom-checkbox:checked + .symptom-label {
+    border-color: var(--primary-color);
+    background-color: #eff6ff;
+}
+
+.risk-high {
+    color: var(--danger-color);
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fef2f2;
+    border-radius: 5px;
+}
+
+.risk-medium {
+    color: var(--warning-color);
+    font-weight: bold;
+    padding: 10px;
+    background-color: #fffbeb;
+    border-radius: 5px;
+}
+
+.risk-low {
+    color: var(--success-color);
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f0fdf4;
+    border-radius: 5px;
+}
+
+.testing-center-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    transition: transform 0.2s;
+}
+
+.testing-center-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#testing-centers-map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .symptom-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .assessment-container {
+        padding: 10px;
+    }
+}

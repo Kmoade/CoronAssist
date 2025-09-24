@@ -1,0 +1,9 @@
+## Server Setup
+# Create project directory
+mkdir -p /var/www/coronassist/{api,config,models,js,css}
+chown -R www-data:www-data /var/www/coronassist
+
+
+# Database Setup
+mysql -u root -p < database/schema.sql
+
